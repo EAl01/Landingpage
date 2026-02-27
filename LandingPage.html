@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UNICOLD</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="navbar">
+        <div class="logo">UNI<span>COLD</span></div>
+        <nav>
+            <ul class="nav">
+                <li><a href="#">Home</a></li>
+                <li><a href="#Products">Products</a></li>
+                <li><a href="#About">About</a></li>
+                <li><a href="#Contact">Contact</a></li>
+                <li><a href="C:\Users\earl\OneDrive\Desktop\Landingpage\Cart.html"><img src="Cart.jpg" id="Cart"></a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="Banner">
+        <img src="BG1.jpg" alt="Background" class="banner-img">
+        <div class="b-contents">
+            <h1>Feeling Cold?</h1>
+            <p>High Quality Clothes, Only you can buy here, even how cold her/him is with this clothes you will never feel cold again.</p>
+            <a href="#Products" class="p-btn">BUY NOW</a>
+        </div>
+
+    </section>
+
+    <section class="Products" id="Products">
+        <h2>Featured Products</h2>
+        <div class="product-card">
+            <img src="PRODUCT1.jpg">
+                <h3>Unisex Plain T-shirt</h3>
+                <p class="price">₱350.00</p>
+                <button class="cart-btn" onclick="showSuccess()">Add to Cart</button>
+            </div>
+            <div class="product-card">
+                <img src="PRODUCT2.jpg">
+                <h3>Hoodie</h3>
+                <p class="price">₱700.00</p>
+                <button class="cart-btn" onclick="showSuccess()">Add to Cart</button>
+            </div>
+            <div class="product-card">
+                <img src="PRODUCT3.jpg">
+                <h3>jacket</h3>
+                <p class="price">₱1000.00</p>
+                <button class="cart-btn" onclick="showSuccess()">Add to Cart</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="reviews-section">
+        <h2>Customer Reviews</h2>
+        <div class="reviews-container">
+            <div class="review-card">
+            <p class="review-text">"Great Jacket! fits perfectly, feels warm, planning to buy again soon."</p>
+            <p class="review-author">- TUNG TUNG SAHUR</p>
+        </div>
+
+        <div class="review-card">
+            <p class="review-text">"2nd time buying here and its really good."</p>
+            <p class="review-author">- I LIKE EM BIG</p>
+            </div>
+        </div>
+    </section>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <div id="toast-message">Successfully added to cart!</div>
+    <script>
+        function showSuccess() {
+            var toast = document.getElementById("toast-message");
+            toast.className = "show";
+            setTimeout(function(){ 
+                toast.className = toast.className.replace("show", ""); 
+            }, 3000);
+            const buttons = document.querySelectorAll('.cart-btn');
+            buttons.forEach(button => {
+            button.addEventListener('click', function() {
+        showSuccess();
+    });
+});
+        }
+    </script>
+
+    <footer>
+        <div class="footer">
+            <section class="About" id="About">
+                <div>
+                    <h3>About us</h3>
+                    <p>High quality and comfort wear for everyday use, We have the Best deals to choose from, You wont regret buying from us.. Enjoy shopping</p>
+                </div>
+            </section>
+
+            <section id="Contact">
+                <div class="Contacts">
+                    <h3>Contact</h3>
+                    <p>Email: Unicold@gmail.com</p>
+                    <p>Phone: 09755342978</p>
+                </div>
+                <div class="socials">
+                    <a href="FB"></a>
+                    <a href="IG"></a>
+                    <a href="X"></a>
+                    <span>
+                        <a href="https://www.facebook.com/earl.llena.1"><img src="FB.jpg" id="FB"></a>
+                    </span>
+                     <span>
+                        <a href="https://l.facebook.com/l.php?u=https%3A%2F%2Fwww.instagram.com%2Fllenaearl%3Ffbclid%3DIwZXh0bgNhZW0CMTAAYnJpZBExQ0hrYnNLSDNWWnRXRU4yZHNydGMGYXBwX2lkEDIyMjAzOTE3ODgyMDA4OTIAAR6R7J_TNQaFTLR5_ZJ5npy1evN8SxaO5yC8N4EsV3uiNFBjWUENNqPSrBIEqg_aem_kLTm-a-v7XTkpGMQNK9STg&h=AT5ZTZh1RIWpxJ5zS6k1iO2pX1HCswmZfQxOFNwTOZb-iicSIn8C1KB6_JxYQk3K9O4Li8LCWemkr1IM6RHClLZawb0BKRU2lyaZS5Je3nlWH2h58FpZTLQSfYY2oWJT7JVJLCs6KAWZjxQXpqMm"><IMG src="IG.jpg" id="IG"></a>
+                     </span> 
+                     <span>
+                        <a href="https://x.com/elonmusk"><img src="X.jpg" id="X"></a>
+                     </span>
+                </div>
+                <p class="legal">
+                    <a>Privacy Policy</a> | <a>Terms & Conditions</a>
+                </p>
+            </div>
+    </footer>
+
+
+</body>

@@ -226,6 +226,19 @@ body { background-color: #f9f9f9; }
     color: #555;
 }
 
+.product-container {
+  display: flex;
+  flex-direction: column; 
+  align-items: center;
+}
+
+@media (min-width: 768px) {
+  .product-container {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
+
 #toast-message {
   visibility: hidden; 
   min-width: 250px;
@@ -245,6 +258,8 @@ body { background-color: #f9f9f9; }
   visibility: visible;
   animation: fadein 0.5s, fadeout 0.5s 2.5s; 
 }
+
+
 
 .footer div { 
     margin-bottom: 20px; 
